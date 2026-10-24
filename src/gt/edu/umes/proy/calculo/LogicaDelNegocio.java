@@ -4,7 +4,6 @@ public class LogicaDelNegocio {
 
     public static final int CANTIDAD_PARAMETROS = 5;
 
-    // Valida que haya 5 parámetros y que todos sean enteros
     public boolean validar(String[] parametros) {
         if (parametros == null || parametros.length != CANTIDAD_PARAMETROS) {
             return false;
@@ -19,13 +18,11 @@ public class LogicaDelNegocio {
         return true;
     }
 
-    // Meses (30 días), semanas, días, horas, minutos -> segundos
     public long calcularSegundos(int meses, int semanas, int dias, int horas, int minutos) {
         long totalDias = meses * 30L + semanas * 7L + dias;
         return totalDias * 24 * 60 * 60 + horas * 60L * 60 + minutos * 60L;
     }
 
-    // Recibe los parámetros crudos, valida y calcula
     public long calcular(String[] parametros) {
         if (!validar(parametros)) {
             throw new IllegalArgumentException(

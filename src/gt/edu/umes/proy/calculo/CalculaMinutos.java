@@ -2,7 +2,6 @@ package gt.edu.umes.proy.calculo;
 
 public class CalculaMinutos {
 
-	//este metodo recibe los parametros y muestra el total en segundos 
     public static void main(String[] args) {
         LogicaDelNegocio logica = new LogicaDelNegocio();
         if (!logica.validar(args)) {
